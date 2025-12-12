@@ -1,10 +1,12 @@
 <script>
 import Header from './components/Header.vue';
+import HeroSection from './components/HeroSection.vue';
 
 
 export default {
     components: {
-        Header
+        Header,
+        HeroSection
     }
 }
 </script>
@@ -12,7 +14,7 @@ export default {
 <template>
     <main>
         <Header></Header>
-
+        <HeroSection></HeroSection>
     </main>
 </template>
 

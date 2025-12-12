@@ -16,13 +16,14 @@ export default {
         display: flex;
         justify-content: flex-end;
         align-items: center;
-        padding: 0 2em;
-        gap: 1.5em;
+        padding: 0 3em;
+        gap: 2em;
         position: fixed;
         top: 0;
         left: 0;
         width: 100vw;
-        height: 60px;
+        height: 70px;
+        z-index: 9;
     }
 
     a {
