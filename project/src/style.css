@@ -20,10 +20,32 @@
 #app {
     width: 100dvw;
     height: 100dvh;
+    overflow-x: hidden;
 }
 
 body {
     font-family: 'Roboto Mono', monospace;
     background-color: var(--bg);
     color: var(--text);
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--sec-text);
+  border-radius: 1em;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #7375dd;
 }
