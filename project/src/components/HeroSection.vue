@@ -38,7 +38,7 @@ export default {
 }
 </script>
 <template>
-    <section>
+    <section id="hero">
         <h1 @mouseenter="randomizeTitle()">{{ displayTitle }}</h1>
         <div class="anim-container">
             <h2>front-end / web developer</h2>
@@ -62,6 +62,10 @@ section {
     align-items: center;
     height: 100dvh;
     position: relative;
+}
+
+h1, h2 {
+    text-align: center;
 }
 
 h1 {

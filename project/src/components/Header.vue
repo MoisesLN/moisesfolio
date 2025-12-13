@@ -5,7 +5,7 @@ export default {
 </script>
 <template>
     <header>
-        <a href="#" class="me">moises</a>
+        <a href="#hero" class="me">moises</a>
         <a href="#projects">projects</a>
         <a href="#about">about</a>
         <a href="#contact">contact me</a>
