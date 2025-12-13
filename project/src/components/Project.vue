@@ -36,7 +36,8 @@ export default {
 .project:hover {
     scale: 1.05;
     img {
-        filter: grayscale(0);
+        -webkit-filter: grayscale(0%);
+        filter: grayscale(0%);
     }
 }
 
@@ -52,7 +53,9 @@ div.img {
 }
 
 img {
-    filter: grayscale(.5);
+    -webkit-filter: grayscale(50%);
+    filter: grayscale(50%);
+    transition: 250ms filter ease;
 }
 
 article {
