@@ -1,14 +1,23 @@
 <script>
 export default {
-    
+    methods: {
+        scrollTo(section) {
+            const element = document.getElementById(section)
+            if(element) {
+                element.scrollIntoView({
+                    behavior: 'smooth'
+                })
+            }
+        }
+    }
 }
 </script>
 <template>
     <header>
-        <a href="#hero" class="me">moises</a>
-        <a href="#projects">projects</a>
-        <a href="#about">about</a>
-        <a href="#contact">contact me</a>
+        <a class="me" @click="scrollTo('hero')">moises</a>
+        <a @click="scrollTo('projects')">projects</a>
+        <a @click="scrollTo('about')">about</a>
+        <a @click="scrollTo('contact')">contact me</a>
     </header>
 </template>
 <style scoped>
@@ -29,6 +38,7 @@ export default {
     a {
         color: var(--subtext);
         text-decoration: none;
+        cursor: pointer;
         opacity: 0;
         &:hover {
             color: var(--text);
