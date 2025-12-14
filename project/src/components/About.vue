@@ -40,6 +40,7 @@ export default {
         align-items: center;
         gap: 3em;
         padding: 4em 2em;
+        border-top: 1px solid rgba(255, 255, 255, .1);
 
         > h3 {
             font-weight: 500;
