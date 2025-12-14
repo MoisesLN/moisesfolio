@@ -2,12 +2,31 @@
 export default {
     props: {
         project: Object
-    }
+    },
+    methods: {
+        // hover effect by https://www.youtube.com/watch?v=htGfnF1zN4g&
+        startGlow() {
+            this.$refs.card.addEventListener('mousemove', this.updateGlow)
+        },
+        removeGlow() {
+            this.$refs.card.removeEventListener('mousemove', this.updateGlow)
+        },
+        updateGlow(e) {
+            // console.log('a')
+            const card = this.$refs.card
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+
+            card.style.setProperty('--mouse-x', `${x}px`)
+            card.style.setProperty('--mouse-y', `${y}px`)
+        }
+    },
 }
 </script>
 
 <template>
-    <div class="project">
+    <div class="project" @mouseenter="startGlow();" @mouseleave="removeGlow();" ref="card">
         <img v-if="project.image" class="img" :src="project.image" alt="Image of the project">
         <div class="img" v-else></div>
         <article>
@@ -31,10 +50,34 @@ export default {
     border-radius: 2em;
     corner-shape: squircle;
     transition: 200ms ease-in-out all;
+    position: relative;
 }
+
+.project::before {
+    background: radial-gradient(
+        800px circle at var(--mouse-x) var(--mouse-y), rgba(255, 255, 255, .05), transparent 40%
+    );
+    corner-shape: inherit;
+    content: '';
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border-radius: inherit;
+    z-index: 2;
+    opacity: 0;
+    transition: opacity 500ms ease;
+}
+
 
 .project:hover {
     scale: 1.05;
+
+    &::before {
+        opacity: 1;
+    }
+
     img {
         -webkit-filter: grayscale(0%);
         filter: grayscale(0%);
