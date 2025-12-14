@@ -14,7 +14,9 @@ export default {
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if(entry.isIntersecting) {
-                    console.log(entry.target)
+                    const element = entry.target
+                    this.randomizeLetters('projects', { target: element })
+                    observer.unobserve(element)
                 }
             })
         }, options)

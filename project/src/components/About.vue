@@ -6,12 +6,29 @@ export default {
         return {
             aboutInfo: aboutInfo
         }
-    }
+    },
+    mounted() {
+        const options = {
+            rootMargin: '20px 0px 0px 0px',
+            threshold: 1.0
+        };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if(entry.isIntersecting) {
+                    const element = entry.target
+                    this.randomizeLetters('about me', { target: element })
+                    observer.unobserve(element)
+                }
+            })
+        }, options)
+
+        observer.observe(this.$refs.title)
+    },
 }
 </script>
 <template>
     <section id="about">
-        <h1 @mouseenter="randomizeLetters('about me', $event)">about me</h1>
+        <h1 @mouseenter="randomizeLetters('about me', $event)" ref="title">about me</h1>
         <h3>17y/o specialist in creating interactive and responsive websites!</h3>
         <div class="container">
             <div class="column" v-for="info in aboutInfo">

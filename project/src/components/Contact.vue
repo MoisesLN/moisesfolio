@@ -1,11 +1,27 @@
 <script>
 export default {
-    
+    mounted() {
+        const options = {
+            rootMargin: '20px 0px 0px 0px',
+            threshold: 1.0
+        };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if(entry.isIntersecting) {
+                    const element = entry.target
+                    this.randomizeLetters('contact me', { target: element })
+                    observer.unobserve(element)
+                }
+            })
+        }, options)
+
+        observer.observe(this.$refs.title)
+    },
 }
 </script>
 <template>
     <section id="contact">
-        <h1 @mouseenter="randomizeLetters('contact me', $event)">contact me</h1>
+        <h1 @mouseenter="randomizeLetters('contact me', $event)" ref="title">contact me</h1>
         <h4>get in touch, let's connect!</h4>
         <div class="container">
             <div class="item">
@@ -36,8 +52,8 @@ export default {
     }
 
     h1 {
-        font-size: 3.5em;
-        font-weight: 500;
+        font-size: 3em;
+        font-weight: 400;
         text-align: center;
     }
 

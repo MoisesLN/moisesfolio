@@ -6,7 +6,6 @@ const app = createApp(App)
 
 // Global function
 app.config.globalProperties.randomizeLetters = (originalText, event) => {
-    console.log('a')
     const letters = 'abcdefghijklmnopqrstuvwxyz'
     let iterations = 0;
     let displayText = '';

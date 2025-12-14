@@ -12,7 +12,6 @@ export default {
             this.$refs.card.removeEventListener('mousemove', this.updateGlow)
         },
         updateGlow(e) {
-            // console.log('a')
             const card = this.$refs.card
             const rect = card.getBoundingClientRect();
             const x = e.clientX - rect.left;
