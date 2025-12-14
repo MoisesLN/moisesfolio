@@ -6,6 +6,21 @@ export default {
     components: {
         Project
     },
+    mounted() {
+        const options = {
+            rootMargin: '20px 0px 0px 0px',
+            threshold: 1.0
+        };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if(entry.isIntersecting) {
+                    console.log(entry.target)
+                }
+            })
+        }, options)
+
+        observer.observe(this.$refs.title)
+    },
     data() {
         return {
             projects: projects
@@ -15,7 +30,7 @@ export default {
 </script>
 <template>
     <section id="projects">
-        <h1>projects</h1>
+        <h1 @mouseenter="randomizeLetters('projects', $event)" ref="title">projects</h1>
         <h2>what i've made in my journey until now</h2>
         <div class="projects">
             <Project v-for="(project, index) in projects" :project :key="index"></Project>
@@ -35,7 +50,7 @@ export default {
 
     h1 {
         font-size: 3em;
-        font-weight: 500;
+        font-weight: 400;
     }
 
     h2 {

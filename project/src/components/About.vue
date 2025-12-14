@@ -11,7 +11,7 @@ export default {
 </script>
 <template>
     <section id="about">
-        <h1>about me</h1>
+        <h1 @mouseenter="randomizeLetters('about me', $event)">about me</h1>
         <h3>17y/o specialist in creating interactive and responsive websites!</h3>
         <div class="container">
             <div class="column" v-for="info in aboutInfo">

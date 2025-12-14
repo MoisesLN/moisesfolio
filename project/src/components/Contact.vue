@@ -5,7 +5,7 @@ export default {
 </script>
 <template>
     <section id="contact">
-        <h1>contact me</h1>
+        <h1 @mouseenter="randomizeLetters('contact me', $event)">contact me</h1>
         <h4>get in touch, let's connect!</h4>
         <div class="container">
             <div class="item">
