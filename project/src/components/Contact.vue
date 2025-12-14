@@ -60,6 +60,7 @@ export default {
     h4 {
         font-size: 1.5em;
         font-weight: 300;
+        text-align: center;
     }
 
     .container {
@@ -86,5 +87,15 @@ export default {
     footer {
         margin-top: auto;
         font-weight: 400;
+    }
+
+    @media (max-width: 500px) {
+        h1 {
+            font-size: 2.5em;
+        }
+        
+        .container {
+            font-size: 1.25em;
+        }
     }
 </style>
