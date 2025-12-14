@@ -61,6 +61,7 @@ export default {
 
         > h3 {
             font-weight: 500;
+            text-align: center;
         }
     }
 
@@ -103,10 +104,10 @@ export default {
         gap: .5em;
         align-items: center;
         margin-top: auto;
+        text-align: center;
 
         .quote {
             font-size: 1.5em;
-            text-align: center;
         }
         .credits {
             font-size: 1.2em;
@@ -136,6 +137,16 @@ export default {
         }
         100% {
             background-position: 100% 0%;
+        }
+    }
+
+    @media (max-width: 500px) {
+        .carrousel {
+            width: 90vw;
+        }
+
+        .stars {
+            animation: moveStars 10s infinite forwards linear;
         }
     }
 </style>
