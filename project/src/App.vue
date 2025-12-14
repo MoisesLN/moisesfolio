@@ -3,6 +3,7 @@ import About from './components/About.vue';
 import Contact from './components/Contact.vue';
 import Header from './components/Header.vue';
 import HeroSection from './components/HeroSection.vue';
+import MouseStalker from './components/MouseStalker.vue';
 import ProjectsContainer from './components/ProjectsContainer.vue';
 
 
@@ -12,7 +13,8 @@ export default {
         HeroSection,
         ProjectsContainer,
         About,
-        Contact
+        Contact,
+        MouseStalker
     }
 }
 </script>
@@ -24,6 +26,8 @@ export default {
         <ProjectsContainer></ProjectsContainer>
         <About></About>
         <Contact></Contact>
+        
+        <MouseStalker></MouseStalker>
     </main>
 </template>
 
