@@ -30,4 +30,10 @@ export default {
         z-index: 5;
         pointer-events: none;
     }
+
+    @media (max-width: 950px) {
+        .mouse-stalker {
+            display: none;
+        }
+    }
 </style>
