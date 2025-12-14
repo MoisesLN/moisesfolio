@@ -36,4 +36,38 @@ const projects = [
     },
 ]
 
-export default projects
+const aboutInfo = [
+    {
+        title: 'skills',
+        content: [
+            'vuejs',
+            'javascript',
+            'python',
+            'C#',
+            'linux',
+            'mysql',
+            'git'
+        ]
+    },
+    {
+        title: 'fields of interest',
+        content: [
+            'fullstack development',
+            'cybersecurity',
+            'web design',
+            'ui/ux'
+        ]
+    },
+    {
+        title: 'hobbies',
+        content: [
+            'learning piano',
+            'meeting people',
+            'coding :]',
+            'reading',
+            'math'
+        ]
+    }
+]
+
+export { projects, aboutInfo }

@@ -1,4 +1,5 @@
 <script>
+import About from './components/About.vue';
 import Header from './components/Header.vue';
 import HeroSection from './components/HeroSection.vue';
 import ProjectsContainer from './components/ProjectsContainer.vue';
@@ -8,7 +9,8 @@ export default {
     components: {
         Header,
         HeroSection,
-        ProjectsContainer
+        ProjectsContainer,
+        About
     }
 }
 </script>
@@ -18,6 +20,7 @@ export default {
         <Header></Header>
         <HeroSection></HeroSection>
         <ProjectsContainer></ProjectsContainer>
+        <About></About>
     </main>
 </template>
 

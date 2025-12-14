@@ -1,6 +1,6 @@
 <script>
 import Project from './Project.vue';
-import projects from '../assets/projects.js';
+import { projects } from '../assets/projects.js'
 
 export default {
     components: {
@@ -30,7 +30,6 @@ export default {
         align-items: center;
         gap: 2em;
         padding: 4em 2em;
-        border-top: 1px solid rgba(255, 255, 255, .35);
     }
 
     h1 {
@@ -46,7 +45,8 @@ export default {
     .projects {
         margin-top: 1em;
         display: flex;
-        flex-direction: column;
+        justify-content: center;
+        flex-wrap: wrap;
         gap: 3em;
     }
 </style>
