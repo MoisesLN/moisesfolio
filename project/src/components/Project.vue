@@ -27,33 +27,46 @@ export default {
 
 <template>
     <div class="project" @mouseenter="startGlow();" @mouseleave="removeGlow();" ref="card">
-        <img v-if="project.image" class="img" :src="project.image" alt="Image of the project">
-        <div class="img" v-else></div>
-        <article>
-            <h2 class="title">{{ project.title }}</h2>
-            <p class="desc">{{ project.description }}</p>
-            <div class="techs" v-if="project.stack.length">
-                <span class="tech" v-for="(tech, index) in project.stack" :key="index">{{ tech }}</span>
-            </div>
-        </article>
+        <div class="content">
+            <img v-if="project.image" class="img" :src="project.image" alt="Image of the project">
+            <div class="img" v-else></div>
+            <article>
+                <h2 class="title">{{ project.title }}</h2>
+                <p class="desc">{{ project.description }}</p>
+                <div class="techs" v-if="project.stack.length">
+                    <span class="tech" v-for="(tech, index) in project.stack" :key="index">{{ tech }}</span>
+                </div>
+            </article>
+        </div>
     </div>
 </template>
 
 <style scoped>
 .project {
-    background-color: rgba(255, 255, 255, .02);
-    border: 1px solid rgba(255, 255, 255, .1);
-    display: flex;
-    flex-direction: column;
+    --card-bg: rgb(31, 32, 35);
     width: 600px;
     max-width: 80vw;
+    background-color: rgba(255, 255, 255, .1);
     border-radius: 2em;
     corner-shape: squircle;
-    transition: 200ms ease-in-out all;
     position: relative;
 }
 
-.project::before {
+.content {
+    background-color: var(--card-bg);
+    display: flex;
+    flex-direction: column;
+    width: calc(100% - 2px);
+    height: calc(100% - 2px);
+    border-radius: 2em;
+    corner-shape: squircle;
+    margin: 1px;
+    transition: 200ms ease-in-out all;
+    position: relative;
+    z-index: 2;
+}
+
+.content::before, .project::after {
     background: radial-gradient(
         800px circle at var(--mouse-x) var(--mouse-y), rgba(255, 255, 255, .05), transparent 40%
     );
@@ -70,11 +83,25 @@ export default {
     transition: opacity 500ms ease;
 }
 
+.content::before {
+    z-index: 3;
+}
 
-.project:hover {
-    scale: 1.05;
+.project::after {
+    background: radial-gradient(
+        400px circle at var(--mouse-x) var(--mouse-y), rgba(255, 255, 255, .3), transparent 40%
+    );
+    z-index: 1;
+}
 
-    &::before {
+.project:hover::after {
+    opacity: 1;
+}
+
+.content:hover {
+    cursor: pointer;
+
+    &::before{
         opacity: 1;
     }
 
