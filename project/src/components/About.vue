@@ -106,6 +106,7 @@ export default {
 
         .quote {
             font-size: 1.5em;
+            text-align: center;
         }
         .credits {
             font-size: 1.2em;
@@ -125,7 +126,7 @@ export default {
         height: 100%;
         border-radius: inherit;
         background-image: url('https://assets.codepen.io/1468070/Star+Pattern+3.svg');
-        background-size: 5%;
+        background-size: 75px;
         animation: moveStars 20s infinite forwards linear;
     }
 
