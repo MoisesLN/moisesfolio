@@ -102,4 +102,14 @@ h2 {
         transform: translateY(50%)
     }
 }
+
+@media (max-width: 500px) {
+    h1 {
+        font-size: 2.5em;
+    }
+    
+    h2 {
+        font-size: 1.5em;
+    }
+}
 </style>
