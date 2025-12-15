@@ -30,14 +30,14 @@ export default {
         <a @click="scrollTo('about')">about</a>
         <a @click="scrollTo('contact')">contact me</a>
         <BIconList @click="popupVisible = !popupVisible"></BIconList>
-        <nav v-if="popupVisible">
-            <a @click="scrollTo('projects')">projects</a>
-            <a @click="scrollTo('about')">about</a>
-            <a @click="scrollTo('contact')">contact me</a>
-            <Teleport to="body">
-                <div class="backdrop" @click="popupVisible = !popupVisible"></div>
-            </Teleport>
-        </nav>
+        <Teleport to="body">
+            <nav v-if="popupVisible" class="popup-nav">
+                <a @click="scrollTo('projects')">projects</a>
+                <a @click="scrollTo('about')">about</a>
+                <a @click="scrollTo('contact')">contact me</a>
+            </nav>
+            <div v-if="popupVisible" class="backdrop" @click="popupVisible = !popupVisible"></div>
+        </Teleport>
     </header>
 </template>
 <style scoped>
@@ -53,6 +53,8 @@ header {
     width: 100vw;
     height: 70px;
     z-index: 9;
+    background: rgba(255, 255, 255, .05);
+    backdrop-filter: blur(12px);
 }
 
 a {
@@ -66,19 +68,21 @@ a {
     }
 }
 
-nav {
+.popup-nav {
     animation: fadeInReverse 300ms ease-out 1 forwards;
-    position: absolute;
-    bottom: calc(-100% - 85px);
+    position: fixed;
+    top: 80px;
     right: 30px;
-    background: rgba(34, 34, 34, 0.06);
+    background: rgba(34, 34, 34, 0.3);
     border: 1px solid rgba(255, 255, 255, .2);
     backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     display: flex;
     flex-direction: column;
     gap: 1.25em;
     padding: 2em 1.5em;
     border-radius: 1em;
+    z-index: 12;
 }
 
 .backdrop {
@@ -88,6 +92,7 @@ nav {
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 11;
 }
 
 svg {
