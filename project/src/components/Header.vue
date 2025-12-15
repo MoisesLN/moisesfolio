@@ -53,7 +53,7 @@ header {
     width: 100vw;
     height: 70px;
     z-index: 9;
-    background: rgba(255, 255, 255, .05);
+    background: rgba(255, 255, 255, .01);
     backdrop-filter: blur(12px);
 }
 

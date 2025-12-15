@@ -27,7 +27,7 @@ export default {
         aspect-ratio: 1 / 1;
         border-radius: 50%;
         transition: 200ms ease-out;
-        z-index: 5;
+        z-index: 11;
         pointer-events: none;
     }
 
