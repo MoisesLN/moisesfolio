@@ -34,7 +34,7 @@ export default {
             </div>
             <div class="item">
                 <h3>instagram</h3>
-                <a href="instagram.com/moiseslopesn/" target="_blank">instagram.com/moiseslopesn</a>
+                <a href="https://instagram.com/moiseslopesn/" target="_blank">instagram.com/moiseslopesn</a>
             </div>
         </div>
         <footer>© 2025 moisesln all rights reserved | coded with 🩵</footer>
