@@ -29,7 +29,7 @@ export default {
 <template>
     <section id="about">
         <h1 @mouseenter="randomizeLetters('about me', $event)" ref="title">about me</h1>
-        <h3>17y/o specialist in creating interactive and responsive websites!</h3>
+        <h3>18y/o specialist in creating interactive and responsive websites!</h3>
         <div class="container">
             <div class="column" v-for="info in aboutInfo">
                 <h3 class="title">{{ info.title }}</h3>
