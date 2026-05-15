@@ -17,10 +17,13 @@
     box-sizing: border-box;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 #app {
     width: 100dvw;
     height: 100dvh;
-    overflow-x: hidden;
 }
 
 body {
