@@ -29,6 +29,10 @@ export default {
                 <a href="mailto:moisesbruh5@gmail.com" target="_blank">moisesbruh5@gmail.com</a>
             </div>
             <div class="item">
+                <h3>linkedin</h3>
+                <a href="https://www.linkedin.com/in/mois%C3%A9s-lopes-n%C3%B3brega-6349b63a2/" target="_blank">linkedin.com/moises-lopes</a>
+            </div>
+            <div class="item">
                 <h3>github</h3>
                 <a href="https://github.com/MoisesLN" target="_blank">github.com/MoisesLN</a>
             </div>
@@ -45,8 +49,9 @@ export default {
         min-height: 100dvh;
         display: flex;
         flex-direction: column;
-        gap: 2.5em;
-        padding: 4em 2em;
+        gap: 2em;
+        padding: 2em;
+        padding-top: calc(70px + 1em);
         align-items: center;
         border-top: 1px solid rgba(255, 255, 255, .1);
     }
@@ -66,10 +71,10 @@ export default {
     .container {
         display: flex;
         flex-direction: column;
-        gap: 2em;
+        gap: 1.5em;
         text-align: left;
         align-items: flex-start;
-        font-size: 1.7em;
+        font-size: 1.3em;
     }
 
     h3 {
@@ -85,8 +90,8 @@ export default {
     }
 
     footer {
-        margin-top: auto;
-        font-weight: 400;
+        margin-top: 2em;
+        font-weight: 300;
     }
 
     @media (max-width: 500px) {

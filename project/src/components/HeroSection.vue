@@ -18,8 +18,8 @@ export default {
             <h2>front-end / web developer</h2>
         </div>
         <div class="anim-container">
-            <h2>vuejs - js - python</h2>
-            <h2>vuejs - js - python</h2>
+            <h2>nextjs - typescript - python</h2>
+            <h2>nextjs - typescript - python</h2>
         </div>
 
         <span class="arrow">
