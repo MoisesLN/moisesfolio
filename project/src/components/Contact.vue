@@ -41,7 +41,7 @@ export default {
                 <a href="https://instagram.com/moiseslopesn/" target="_blank">instagram.com/moiseslopesn</a>
             </div>
         </div>
-        <footer>© 2025 moisesln all rights reserved | coded with 🩵</footer>
+        <footer>© 2025 moisesln all rights reserved | coded with 💙</footer>
     </section>
 </template>
 <style scoped>

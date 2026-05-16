@@ -41,9 +41,10 @@ const aboutInfo = [
         title: 'skills',
         content: [
             'vuejs',
-            'javascript',
+            'nextjs',
+            'tailwindcss',
+            'typescript',
             'python',
-            'C#',
             'linux',
             'mysql',
             'git'
@@ -61,11 +62,11 @@ const aboutInfo = [
     {
         title: 'hobbies',
         content: [
+            'math',
             'learning piano',
             'meeting people',
             'coding :]',
-            'reading',
-            'math'
+            'reading'
         ]
     }
 ]
