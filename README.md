@@ -1,20 +1,24 @@
 # moisesfolio - My portfolio
-It's my personal portfolio! I really liked the result and hopefully you will too :] <br>
+It's my personal portfolio! I really liked the result and hopefully you will too :]
 You can visit it directly here: [moisesln.dev](https://moisesln.dev/)
-
+![Hero section of the website](demo.png)
 <br>
 
 ## Installing the project locally
 ### Cloning the repo
 ```batch
-$ git clone https://github.com/MoisesLN/moisesfolio.git
-$ cd moisesfolio
+git clone https://github.com/MoisesLN/moisesfolio.git
+cd moisesfolio
 ```
 
-### Installing dependencies and running the project
+### Installing dependencies
 ```batch
-$ cd project
-$ npm install
-$ npm run dev dev
+cd project
+npm install
 ```
-The project will then be running at localhost:5173
+
+### Running the project
+```batch
+npm run dev
+```
+The project will then be running at [localhost:5173](http://localhost:5173/)
